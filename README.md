@@ -4,7 +4,7 @@
 
 把看经营、做营销与客户回访放进每日工作台。
 
-**先查看：** [项目案例](https://jia-wen-shi.github.io/#case-store) · [可点击原型](https://jia-wen-shi.github.io/demos/store/) · [作品集首页](https://jia-wen-shi.github.io/)
+**先查看：** [直接演示](https://jia-wen-shi.github.io/demos/store/) · [项目案例](https://jia-wen-shi.github.io/#case-store) · [可点击原型](https://jia-wen-shi.github.io/demos/store/) · [作品集首页](https://jia-wen-shi.github.io/)
 
 无需登录 GitHub 即可浏览公开源码。案例页和公共原型不需要安装环境或填写模型密钥。
 
@@ -25,6 +25,10 @@
 `src/ · public/`
 
 这是当前工作区源码的发布快照，未附带旧 Git 历史。真实密钥、数据库、浏览器会话、日志、客户原始金融材料和依赖缓存不在仓库内。
+
+## 无后台演示
+
+在前端地址后加 `?demo=1`，可直接进入示例经营看板。所有经营数据与 AI 回复均为界面演示。
 
 ## 本地运行
 

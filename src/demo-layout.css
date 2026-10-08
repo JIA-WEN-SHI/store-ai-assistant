@@ -1,0 +1,22 @@
+@media(max-width:1024px){
+html.public-demo body{min-width:0}
+html.public-demo .app-shell{display:block}
+html.public-demo .sidebar{position:relative;width:100%;height:auto;min-height:0;padding:16px;inset:auto}
+html.public-demo .sidebar nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:12px}
+html.public-demo .sidebar button{min-width:0;font-size:12px;padding:9px 6px}
+html.public-demo .sidebar-footer{display:none}
+html.public-demo .main{margin-left:0;width:100%;min-width:0}
+html.public-demo .topbar{height:auto;padding:12px 16px;gap:10px;flex-wrap:wrap}
+html.public-demo .page-body{padding:16px}
+html.public-demo .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+html.public-demo .campaign-grid,html.public-demo .marketing-layout{grid-template-columns:minmax(0,1fr)}
+html.public-demo .table-wrap{overflow-x:auto}
+}
+@media(max-width:540px){
+html.public-demo .sidebar nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+html.public-demo .sidebar button svg{display:none}
+html.public-demo .page-header{flex-wrap:wrap}
+html.public-demo .form-grid,html.public-demo .source-grid,html.public-demo .evidence-grid,html.public-demo .marketing-data-strip{grid-template-columns:minmax(0,1fr)}
+html.public-demo .card{padding:16px;min-width:0}
+html.public-demo table{min-width:600px}
+}

@@ -1,4 +1,5 @@
-import { useMemo, useState, type ReactElement, type ReactNode } from "react";
+import { useEffect, useMemo, useState, type ReactElement, type ReactNode } from "react";
+import './demo-layout.css';
 import {
   AlertTriangle,
   Bell,
@@ -185,7 +186,12 @@ const scripts = [
 ];
 
 function App() {
-  const [page, setPage] = useState<Page>("login");
+  const publicDemo = new URLSearchParams(window.location.search).get("demo") === "1";
+  useEffect(() => {
+    if (publicDemo) document.documentElement.classList.add('public-demo');
+    return () => { if (publicDemo) document.documentElement.classList.remove('public-demo'); };
+  }, [publicDemo]);
+  const [page, setPage] = useState<Page>(publicDemo ? "dashboard" : "login");
   const [campaignStep, setCampaignStep] = useState<CampaignStep>(1);
   const [selectedGoal, setSelectedGoal] = useState("老客回店");
   const [selectedCustomer, setSelectedCustomer] = useState(customers[0]);
@@ -226,6 +232,7 @@ function App() {
     <div className="app-shell">
       <Sidebar current={page} onNavigate={goToPage} />
       <main className="main">
+        {publicDemo && <div style={{padding:"10px 24px",background:"#edf4ff",color:"#294a75",fontSize:12}}>公开演示 · 示例门店与经营数据 · AI 回复和营销内容为预设样例，未连接真实业务系统。可从经营看板进入客户管理或营销助手。</div>}
         <Topbar />
         <div className="page-body">
           {page === "onboarding" && <OnboardingPage onFinish={() => setPage("dashboard")} />}
